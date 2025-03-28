@@ -46,10 +46,10 @@ git clone https://github.com/your-repo/boardgame-db.git
 mvn clean package
 
 # 3. Deploy to AWS (via GitHub Actions)
-# - Set these secrets in GitHub:
-#   AWS_ACCESS_KEY_ID
-#   AWS_SECRET_ACCESS_KEY
-#   KUBE_CONFIG_DATA
+- Set these secrets in GitHub:
+   AWS_ACCESS_KEY_ID
+   AWS_SECRET_ACCESS_KEY
+   KUBE_CONFIG_DATA
 ```
 
 ## 📊 Monitoring Setup
@@ -71,7 +71,6 @@ kubectl port-forward svc/grafana 3000:3000 -n monitoring
 Default Test Credentials:
 
 ```text
-Copy
 User:     bugs / bunny
 Manager:  daffy / duck
 ```
@@ -79,7 +78,6 @@ Manager:  daffy / duck
 # Run Tests:
 
 ```bash
-Copy
 mvn test  # Includes:
           # - Security config tests
           # - Controller unit tests
